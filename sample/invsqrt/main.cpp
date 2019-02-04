@@ -59,30 +59,13 @@ std::string ToString(const T t)
 
 int main(int argc, const char * argv[])
 {
-	float a = 1.f;
+	float aa = 1.0f;
+	double bb = 1.0;
 
-	int n = 0;
-	float res;
-	START_TIMER(t1);
-	for (n = 0; n < 99999900; n++)
-	{
-		res = imath::fastinvsqrt(a, 1);
-		// res = 0;
-	}
-	END_TIMER(t1);
+	float res1 = imath::fastinvsqrt(aa);
+	double res3 = imath::fastinvsqrt(bb);
 
-	std::cout << "fast invsqrt res:" << res << "\n";
-
-	float resb;
-	START_TIMER(t2);
-	for (n = 0; n < 99999900; n++)
-	{
-		resb = 1 / sqrt(a);
-		// resb = 0;
-	}
-	END_TIMER(t2);
-	std::cout << "std invsqrt res:" << resb << "\n";
-
+	std::cout<<"res1:"<<res1<<"\nres3:"<<res3<<std::endl;
 	return 0;
 }
 

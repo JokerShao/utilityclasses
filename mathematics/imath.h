@@ -18,7 +18,9 @@ namespace imath {
     // it will lead to orientation error.
     // see http://blog.sina.com.cn/s/blog_15211dfec0102wvbz.html
     // actually, it is't faster than std::sqrt :-(
-    float fastinvsqrt(float x, int niter = 3);
+    float fastinvsqrt(float x);
+
+    double fastinvsqrt(double x);
 
 }
 #endif

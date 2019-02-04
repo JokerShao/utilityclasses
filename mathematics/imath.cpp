@@ -7,15 +7,25 @@
 
 namespace imath {
 
-    float fastinvsqrt(float x, int niter)
+    float fastinvsqrt(float x)
     {
         float xhalf = 0.5f * x;
         int i = *(int *)&x;
-        i = 0x5f3759df - (i >> 1);
+        i = 0x5f3759df/*0x5f375a86*/ - (i >> 1);
         x = *(float *)&i;
-        // iterator
-        for (int n = 0; n < niter; n++)
-            x = x * (1.5f - xhalf * x * x);
+        x = x * (1.5f - xhalf * x * x);
+        x = x * (1.5f - xhalf * x * x); // 2nd iteration, this can be removed
+        return x;
+    }
+
+    double fastinvsqrt(double x)
+    {
+        double xhalf = 0.5 * x;
+        long i = *(long*)&x;
+        i = 0x5fe6eb50c7aa19f9 - (i >> 1);
+        x = *(double*)&i;
+        x = x * (1.5 - xhalf * x * x);
+        x = x * (1.5 - xhalf * x * x); // 2nd iteration, this can be removed
         return x;
     }
 
