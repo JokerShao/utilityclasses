@@ -1,12 +1,15 @@
 # Prerequisites
 *.d
 .vscode
+.vs
 
 # Compiled Object files
 *.slo
 *.lo
 *.o
 *.obj
+x64/
+*.user
 
 # Precompiled Headers
 *.gch
