@@ -11,11 +11,16 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="colormomentsdemo.cpp" />
     <ClCompile Include="cudadevicecheck.cpp" />
+    <ClCompile Include="cvtickmeterdemo.cpp" />
     <ClCompile Include="cvtrackbar.cpp" />
+    <ClCompile Include="cartesianproduct.cpp" />
+    <ClCompile Include="dbscandemo.cpp" />
     <ClCompile Include="fileexisttest.cpp" />
     <ClCompile Include="meanstddevdemo.cpp" />
     <ClCompile Include="numericalstring.cpp" />
+    <ClCompile Include="planefittingdemo.cpp" />
     <ClCompile Include="singleton.cpp" />
     <ClCompile Include="utilityclasses.cpp" />
   </ItemGroup>
@@ -67,7 +72,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>E:\LIBRARIES\opencv\opencv-3.4.3\build\install\include;$(CUDA_PATH_V10_0)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\LIBRARIES\Eigen;E:\LIBRARIES\opencv\opencv-3.4.3\build\install\include;$(CUDA_PATH_V10_0)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

@@ -28,8 +28,7 @@ bool print_device_info(int dev_id = 0)
 	return true;
 }
 
-//int device_check_demo()
-int main()
+int device_check_demo()
 {
 	print_device_info();
 
