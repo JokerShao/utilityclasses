@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="dbscan.cpp">
+      <Filter>DBScan</Filter>
+    </ClCompile>
+    <ClCompile Include="dbscandemo.cpp">
+      <Filter>DBScan</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="planefittingdemo.cpp">
+      <Filter>PlaneFitting</Filter>
+    </ClCompile>
+    <ClCompile Include="cudadevicecheck.cpp">
+      <Filter>CUDADevCheck</Filter>
+    </ClCompile>
+    <ClCompile Include="cartesianproductdemo.cpp">
+      <Filter>CartesianProduct</Filter>
+    </ClCompile>
+    <ClCompile Include="cartesianproduct.h">
+      <Filter>CartesianProduct</Filter>
+    </ClCompile>
+    <ClCompile Include="numerical2stringdemo.cpp">
+      <Filter>Numerical2String</Filter>
+    </ClCompile>
+    <ClCompile Include="numerical2string.h">
+      <Filter>Numerical2String</Filter>
+    </ClCompile>
+    <ClCompile Include="fileexist.h">
+      <Filter>FileExist</Filter>
+    </ClCompile>
+    <ClCompile Include="fileexistdemo.cpp">
+      <Filter>FileExist</Filter>
+    </ClCompile>
+    <ClCompile Include="cvtickmeterdemo.cpp">
+      <Filter>OpenCVUsage</Filter>
+    </ClCompile>
+    <ClCompile Include="cvtrackbardemo.cpp">
+      <Filter>OpenCVUsage</Filter>
+    </ClCompile>
+    <ClCompile Include="tickcounterdemo.cpp">
+      <Filter>TickCounter</Filter>
+    </ClCompile>
+    <ClCompile Include="singletondemo.cpp">
+      <Filter>Singleton</Filter>
+    </ClCompile>
+    <ClCompile Include="imageevaldemo.cpp">
+      <Filter>OpenCVUsage</Filter>
+    </ClCompile>
+    <ClCompile Include="colormomentsdemo.cpp">
+      <Filter>OpenCVUsage</Filter>
+    </ClCompile>
+    <ClCompile Include="imath.cpp">
+      <Filter>Mathematics</Filter>
+    </ClCompile>
+    <ClCompile Include="socketbase.cpp">
+      <Filter>Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="tcpclient.cpp">
+      <Filter>Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="tcpserver.cpp">
+      <Filter>Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="udpclient.cpp">
+      <Filter>Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="udpserver.cpp">
+      <Filter>Socket</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="DBScan">
+      <UniqueIdentifier>{aaa8ae9f-81ce-460b-bb99-c82393a848cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{4dd94b3d-07d5-4011-8c4c-29b0ec3d3aa1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Singleton">
+      <UniqueIdentifier>{c94b402f-7ff6-426e-bd2c-564e65436e14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlaneFitting">
+      <UniqueIdentifier>{ca73b1f2-38b8-4cfb-8eb6-a3db0fe01b8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CartesianProduct">
+      <UniqueIdentifier>{f6b4167a-c8db-4cd9-9a21-d8b28819969d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CUDADevCheck">
+      <UniqueIdentifier>{527bbb8e-f278-4563-901a-75795ad45e19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TickCounter">
+      <UniqueIdentifier>{bf33d020-1bf0-4583-9dbd-5bd01b9c52f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Numerical2String">
+      <UniqueIdentifier>{44583b3f-575e-4788-a153-57cb28cdad9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FileExist">
+      <UniqueIdentifier>{13e30992-4368-4a94-bce1-40788224ac72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenCVUsage">
+      <UniqueIdentifier>{d32bff46-32f1-466a-90ea-f8d7ba773f7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Socket">
+      <UniqueIdentifier>{a7d40b33-24a8-43d8-bdd9-4e3f7af93cd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mathematics">
+      <UniqueIdentifier>{b85435d3-3030-4a32-ba9f-b6834c002dde}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dbscan.h">
+      <Filter>DBScan</Filter>
+    </ClInclude>
+    <ClInclude Include="singleton.h">
+      <Filter>Singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="tickcounter.h">
+      <Filter>TickCounter</Filter>
+    </ClInclude>
+    <ClInclude Include="imath.h">
+      <Filter>Mathematics</Filter>
+    </ClInclude>
+    <ClInclude Include="socketbase.h">
+      <Filter>Socket</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore">
+      <Filter>Resource</Filter>
+    </None>
+    <None Include="README.md">
+      <Filter>Resource</Filter>
+    </None>
+  </ItemGroup>
+</Project>

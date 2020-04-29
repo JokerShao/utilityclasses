@@ -1,4 +1,6 @@
-﻿#include <iostream>
+﻿#if 0
+
+#include <iostream>
 #include "opencv2/imgcodecs.hpp"
 #include "opencv2/imgproc.hpp"
 
@@ -30,17 +32,17 @@ double cal_mean_gradient(const cv::Mat& gray)
 		for (int j = 0; j < cols; j++) {
 			double dx = gray64f.at<double>(i, j + 1) - gray64f.at<double>(i, j);
 			double dy = gray64f.at<double>(i + 1, j) - gray64f.at<double>(i, j);
-			double ds = std::sqrt((dx*dx + dy * dy) / 2);
+			double ds = std::sqrt((dx * dx + dy * dy) / 2);
 			tmp += ds;
 		}
 	}
 	// mean gradient
-	return tmp / (rows*cols);
+	return tmp / (rows * cols);
 }
 
 int image_eval_demo()
 {
-	cv::Mat img = cv::imread("D:\\DataRepository\\greenscreen\\cup\\2.png");
+	cv::Mat img = cv::imread("2.png");
 	cv::Mat gray;
 	cv::cvtColor(img, gray, cv::COLOR_BGR2GRAY);
 	auto mean_stddev = cal_mean_stddev(gray);
@@ -49,4 +51,6 @@ int image_eval_demo()
 	std::cout << "mean grdient: " << mean_grdient << "\n";
 	return 0;
 }
+
+#endif
 

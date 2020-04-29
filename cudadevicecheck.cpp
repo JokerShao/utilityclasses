@@ -1,8 +1,10 @@
-﻿#include <iostream>
+﻿#if 0
+
+#include <iostream>
 #include <cuda_runtime.h>
 
-
 #pragma comment(lib, "cudart.lib")
+
 
 bool print_device_info(int dev_id = 0)
 {
@@ -34,4 +36,6 @@ int device_check_demo()
 
 	return 0;
 }
+
+#endif
 

@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 #include <string>
-#include "../../src/singleton.h"
+#include "singleton.h"
 
 
 class A {
@@ -27,10 +27,10 @@ public:
 	void print() { std::cout << "C print.\n"; }
 };
 
+
 int singleton_demo()
 {
-
-	//等同于入口函数int main()
+	// 等同于入口函数int main()
 	auto aa0 = Singleton<A>::GetInstance();
 	auto aa1 = Singleton<A>::GetInstance();
 	auto aa2 = Singleton<A>::GetInstance();
@@ -55,6 +55,6 @@ int singleton_demo()
 	std::cout << "cc1 addr: " << cc1 << "\n";
 	std::cout << "cc2 addr: " << cc2 << "\n\n";
 
-	return 1;
+	return 0;
 }
 

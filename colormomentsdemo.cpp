@@ -1,30 +1,32 @@
-﻿/** formula see https://blog.csdn.net/Blateyang/article/details/70499972 */
+﻿#if 0
+
+/** formula see https://blog.csdn.net/Blateyang/article/details/70499972 */
 #include <iostream>
+
 #include "opencv2/core.hpp"
 #include "opencv2/highgui.hpp"
-
 
 #pragma comment(lib, "opencv_core343d.lib")
 #pragma comment(lib, "opencv_highgui343d.lib")
 
-double calc3orderMom(cv::Mat &channel) //计算三阶矩
+
+double calc3orderMom(cv::Mat& channel) //计算三阶矩
 {
 	double m = cv::mean(channel)[0];    //计算单通道图像的均值
 	double mom = 0.0;
 
-	uchar *p = nullptr;
+	uchar* p = nullptr;
 	for (int i = 0; i < channel.rows; i++) //计算立方和
 	{
 		p = channel.ptr<uchar>(i);
 		for (int j = 0; j < channel.cols; j++)
 			mom += pow((p[j] - m), 3);
 	}
-
-	return cv::cubeRoot((float)(mom / (channel.rows*channel.cols)));    //求均值的立方根
+	return cv::cubeRoot((float)(mom / (channel.rows * channel.cols)));    //求均值的立方根
 }
 
 // 计算9个颜色矩：3个通道的1、2、3阶矩
-void colorMom(const cv::Mat &img, double* Mom)
+void colorMom(const cv::Mat& img, double* Mom)
 {
 	assert(img.channels() == 3);
 	cv::Mat tmp_m, tmp_sd;
@@ -35,12 +37,13 @@ void colorMom(const cv::Mat &img, double* Mom)
 	{
 		cv::meanStdDev(channels[idx], tmp_m, tmp_sd);
 		Mom[idx] = tmp_m.at<double>(0, 0);
-		Mom[idx+3] = tmp_sd.at<double>(0, 0);
-		Mom[idx+6] = calc3orderMom(channels[idx]);
+		Mom[idx + 3] = tmp_sd.at<double>(0, 0);
+		Mom[idx + 6] = calc3orderMom(channels[idx]);
 	}
 }
 
-int color_moment_test()
+
+int color_moments_demo()
 {
 	cv::Mat src1 = cv::imread("img1.jpg");
 	cv::Mat src2 = cv::imread("img2.jpg");
@@ -62,4 +65,6 @@ int color_moment_test()
 
 	return 0;
 }
+
+#endif
 

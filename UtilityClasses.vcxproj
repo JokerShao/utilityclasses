@@ -5,45 +5,54 @@
       <Configuration>Debug</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|x64">
-      <Configuration>Release</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="cartesianproductdemo.cpp" />
     <ClCompile Include="colormomentsdemo.cpp" />
     <ClCompile Include="cudadevicecheck.cpp" />
     <ClCompile Include="cvtickmeterdemo.cpp" />
-    <ClCompile Include="cvtrackbar.cpp" />
-    <ClCompile Include="cartesianproduct.cpp" />
+    <ClCompile Include="cvtrackbardemo.cpp" />
+    <ClCompile Include="cartesianproduct.h" />
+    <ClCompile Include="dbscan.cpp" />
     <ClCompile Include="dbscandemo.cpp" />
-    <ClCompile Include="fileexisttest.cpp" />
-    <ClCompile Include="meanstddevdemo.cpp" />
-    <ClCompile Include="numericalstring.cpp" />
+    <ClCompile Include="fileexist.h" />
+    <ClCompile Include="fileexistdemo.cpp" />
+    <ClCompile Include="imath.cpp" />
+    <ClCompile Include="imageevaldemo.cpp" />
+    <ClCompile Include="numerical2stringdemo.cpp" />
+    <ClCompile Include="numerical2string.h" />
     <ClCompile Include="planefittingdemo.cpp" />
-    <ClCompile Include="singleton.cpp" />
-    <ClCompile Include="utilityclasses.cpp" />
+    <ClCompile Include="singletondemo.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="socketbase.cpp" />
+    <ClCompile Include="tcpclient.cpp" />
+    <ClCompile Include="tcpserver.cpp" />
+    <ClCompile Include="tickcounterdemo.cpp" />
+    <ClCompile Include="udpclient.cpp" />
+    <ClCompile Include="udpserver.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dbscan.h" />
+    <ClInclude Include="imath.h" />
+    <ClInclude Include="singleton.h" />
+    <ClInclude Include="socketbase.h" />
+    <ClInclude Include="tickcounter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="README.md" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{4F8B6C1E-9659-42A0-B324-7BFE7C3DE0E3}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>UtilityClasses</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -53,15 +62,9 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -72,31 +75,12 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>E:\LIBRARIES\Eigen;E:\LIBRARIES\opencv\opencv-3.4.3\build\install\include;$(CUDA_PATH_V10_0)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>E:\LIBRARIES\opencv\opencv-3.4.3\build\install\x64\vc15\lib;$(CUDA_PATH_V10_0)\lib\x64\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

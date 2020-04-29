@@ -1,4 +1,6 @@
-﻿#include <iostream>
+﻿#if 0
+
+#include <iostream>
 #include "opencv2/core.hpp"
 
 
@@ -17,4 +19,6 @@ int cv_tickmeter_demo()
 
 	return 0;
 }
+
+#endif
 

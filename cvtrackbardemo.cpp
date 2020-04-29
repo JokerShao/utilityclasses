@@ -1,5 +1,8 @@
-﻿#include <iostream>
+﻿#if 0
+
+#include <iostream>
 #include <thread>
+
 #include "opencv2/highgui.hpp"
 
 #pragma comment(lib, "opencv_core343d.lib")
@@ -12,7 +15,7 @@
 //	cv::imshow("滑动窗口", display_pic);
 //}
 
-int trackbar_demo()
+int cv_trackbar_demo()
 {
 	cv::namedWindow("trackbar", 0);
 
@@ -28,4 +31,6 @@ int trackbar_demo()
 
 	return 0;
 }
+
+#endif
 
